@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+        .btn{
+            border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+        }
+        .btn span{
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        .btn:hover{
+            background-color: orange;
+        }
+        .btn span::after{
+            content: '\00bb';
+            opacity: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        .btn:hover span{
+            padding-right: 25px;
+        }
+        .btn:hover span::after{
+            opacity: 1;
+            right: 0;
+        }
+        </style>
+    </head>
+    <body>
+        <center>
+            <br>
+            <h1>Animated Button-2</h1>
+            <br>
+            <button class="btn"><span>Hover</span></button>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .dropdown-menu {
+            background: #333333;
+            width: 100%;
+            height: 50px
+        }
+
+        ul {
+            background: #333333;
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+        }
+
+        li {
+
+            background: #333333;
+            display: block;
+            float: left;
+            padding: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: relative;
+            text-decoration: none;
+            transition-duration: 0.5s;
+            color: white;
+        }
+
+        .selected {
+            background-color: #4caf50;
+        }
+
+        li:hover {
+            background: #0e0000;
+            cursor: pointer;
+
+        }
+
+        ul li ul {
+            background: #333333;
+            visibility: hidden;
+            opacity: 0;
+            min-width: 5rem;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+        ul li:hover>ul,
+        ul li ul:hover {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+
+        }
+
+        ul li ul li {
+            clear: both;
+            width: 100%;
+        }
+
+        .right {
+            float: right;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Horizontal menubar starts-->
+    <div class="dropdown-menu">
+        <ul>
+            <li class="selected">Home</li>
+            <li>About</li>
+            <li>Products
+                <ul>
+
+                    <li>Interior</li>
+                    <li>Exterior</li>
+                    <li>Outdoor</li>
+                </ul>
+            </li>
+            <li>Gallery
+                <ul>
+                    <li>Home</li>
+                    <li>College</li>
+                    <li>Toor</li>
+                    <li>Festival</li>
+                </ul>
+            </li>
+            <li class="right">Sign Up</li>
+            <li>Conclusion</li>
+            <li class="right">Login</li>
+        </ul>
+    </div>
+    <!--Horizontal menubar ends-->
+</body>
+
+
+</html>

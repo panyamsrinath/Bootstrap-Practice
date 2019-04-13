@@ -1,0 +1,147 @@
+<html>
+  <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="dist/fa/css/all.css" />
+    <link rel="stylesheet" href="dist/css/carousel.css" />
+    <script src="dist/js/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+    <style>
+      .facebook {
+        background-color: #3b5998;
+        color: white;
+      }
+      .twitter{
+        background-color:#55ACEE;
+        color: white;
+      }
+      .google{
+        background-color: #dd4b39;
+  color: white;
+      }
+      .btn{
+          text-align: left;
+      }
+      .btn1{
+          text-align: center;
+      }
+      .v1{
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%);
+          height: 175px;
+          border: 2px solid #ddd;
+          display: block;
+      }
+      .v1-innertext{
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          background-color: #cac7c7;
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          padding: 8px 10px;
+          color: white;
+         
+      }
+      .v2{
+         display: none;
+      } 
+      
+      .btn2{
+          background-color: #666666;
+          color: white;
+          border-radius: 0;
+          text-align: center;
+          margin-bottom: 0;
+          padding-bottom: 20px;
+      }
+      .btn:hover{
+          color: white;
+      }
+      .well{
+          padding-bottom: 0;
+      }
+      @media screen and (min-width:1px) and (max-width:800px){
+          .v1{
+              display: none;
+          }
+          .v2{
+              display: block;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <br />
+    <div class="container">
+        <div class="well">
+      <div class="row">
+        
+          <h3 class="text-center"><b>Login with Social Media or Manually</b></h3>
+          <br><br>
+          <div class="col-md-5">
+            <div class="row form-group ">
+              <button class="btn btn-lg btn-block facebook text-left">
+                <i class="fab fa-facebook-f"></i>&nbsp; Login with Facebook
+              </button>
+            </div>
+            <div class="row form-group">
+                    <button class="btn btn-lg btn-block twitter">
+                      <i class="fab fa-twitter text-left"></i> Login with Twitter
+                    </button>
+                  </div>
+                  <div class="row form-group text-left">
+                        <button class="btn btn-lg btn-block google">
+                          <i class="fab fa-google"></i>&nbsp; Login with Google+
+                        </button>
+                      </div>
+
+          </div>
+          <div class="col-md-2 text-center">
+              <div class="v1">
+                  <span class="v1-innertext">or</span>
+              </div>
+              <div class="v2">
+                  <span class="v2-innertext">Or sign in manually</span>
+              </div>
+              <br>
+          </div>
+          <div class="col-md-5">
+              <div class="row form-group">
+                  <input type="text" class="form-control input-lg" placeholder="Username">
+              </div>
+              <div class="row form-group">
+                    <input type="text" class="form-control input-lg" placeholder="Password">
+                </div>
+                <div class="row form-group">
+                        <button class="btn btn-lg btn-block btn-success btn1">
+                          Login 
+                        </button>
+                      </div>
+          </div>
+        
+      </div>
+      <div class="row">
+            <div class="col-md-6">
+                  <div class="row   ">
+                          <button class="btn btn-lg btn-block btn2">
+                            Sign up 
+                          </button>
+                        </div>
+            </div>
+            <div class="col-md-6">
+                  <div class="row ">
+                          <button class="btn btn-lg btn-block btn2">
+                           Forgot Password?
+                          </button>
+                        </div>
+            </div>
+        </div>
+    </div>
+     
+   
+    </div>
+  </body>
+</html>

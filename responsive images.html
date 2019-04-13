@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+      body {
+        font-family: cursive;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .image{
+        width: 23%;
+        float: left;
+        margin: 1%;
+        border-radius: 5px;
+      }
+      .image:hover{
+          opacity: 0.5;
+      }
+      img{
+          width: 100%;
+          border-radius: 10px;
+      }
+      .modal{
+          display: none;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: black;
+          background-color: rgba(0, 0, 0, 0.8);
+          overflow: auto;
+          position: fixed;
+          padding-top: 100px;
+
+      }
+      .modal-content{
+          display: block;
+          width: 80%;
+          max-width: 700px;
+          margin: auto;
+      }
+      #caption{
+        display: block;
+          width: 80%;
+          max-width: 700px;
+          margin: auto;
+      }
+      .modal-content, #caption{
+          animation-name: zoom;
+          animation-duration: 0.3s;
+      }
+      @keyframes zoom{
+          from{
+              transform: scale(0.1);
+          }
+          to{
+              transform: scale(1);
+          }
+      }
+      .close{
+          position: absolute;
+          top: 30px;
+          right: 35px;
+          color: white;
+          font-size: 30px;
+          font-family: sans-serif;
+      }
+      .close:hover{
+          color: rgb(179, 168, 168);
+          cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-center">Gallery</h1>
+    <div class="row">
+      <div class="image">
+        <img src="images/forest.jpg" alt="Green Forest" id="myimage"/>
+      </div>
+      <div class="image">
+        <img src="images/bluesea.jpg" alt="Blue Sea" id="myimage"/>
+      </div>
+      <div class="image">
+        <img src="images/flowers.jpg" alt="White Flowers"id="myimage"/>
+      </div>
+      <div class="image">
+        <img src="images/mountains.jpg" alt="Hilly Mountains" id="myimage"/>
+      </div>
+    </div>
+    <div id="mymodal" class="modal">
+        <span class="close">X</span>
+        <img class="modal-content" id="image1">
+        <div id="caption"></div>
+    </div>
+    <script>
+        var modal = document.getElementById("mymodal");
+    
+       var img = document.getElementById("myimage");
+       console.log(img);
+        var modalImg = document.getElementById("image1");
+        var contentText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            contentText.innerHTML = this.alt;
+        }
+      var span =document.getElementsByClassName("close")[0];
+      span.onclick = function(){
+          modal.style.display ="none";
+      }
+    </script>
+  </body>
+</html>
